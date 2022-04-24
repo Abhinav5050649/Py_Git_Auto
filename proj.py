@@ -68,7 +68,7 @@ def remote_git(path):
             README_Checker()
             branch_n = git_branch_checker()    #Check for presence of branches
             git_add_commit_process()
-            push_branch_n = "git push -u origin " + branch_n
+            push_branch_n = "git push --set-upstream origin " + branch_n
             os.system(push_branch_n)     #add feature for branch specific work
             print("Pushed successfully!")
             print("\n\n")
@@ -82,7 +82,7 @@ def remote_git(path):
             README_Checker()
             branch_n = git_branch_checker()
             git_add_commit_process()
-            push_branch_n = "git push -u origin " + branch_n
+            push_branch_n = "git push --set-upstream origin " + branch_n
             os.system(push_branch_n)    #add feature for branch specific work
             print("Pushed successfully!")
             print("\n\n")
@@ -119,6 +119,6 @@ def main():
     else:
         remote_git(path)
 
-    print("\n\n     Thank you for using this script. Feel free to suggest any improvements that I can make in the code")
+    print("\n\nThank you for using this script. Feel free to suggest any improvements that I can make in the code")
 
 main()
