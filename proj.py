@@ -60,9 +60,9 @@ def remote_git(path):
     if (str in os.listdir()):
         os.system("git remote -v")
         print("\n\n")
-        print("If you see a fatal error or any error message, then it means that you haven't connected your local git repo to the remote repo on github.")
+        print("If you don't see any message, then it means that you haven't connected your local git repo to the remote repo on github.")
         print("\n\n")
-        check_var = int(input("Press 1 if no errors were observed. Else, press 2:  "))
+        check_var = int(input("Press 2 if no message(s) were observed. Else, press 1:  "))
         print("\n\n")
         if (check_var == 1):
             README_Checker()
@@ -77,7 +77,8 @@ def remote_git(path):
             print("Ok. You will have to follow the documentation given on github.com for this purpose. Then, paste the ssh link on the terminal when prompted.")
             print("\n\n")
             link = input("Enter link:  ")
-            os.system("git -remote add origin ", link)
+            ssh_link_for_remote_repo = "git -remote add origin " + link
+            os.system(ssh_link_for_remote_repo)
             README_Checker()
             branch_n = git_branch_checker()
             git_add_commit_process()
