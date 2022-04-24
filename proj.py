@@ -9,12 +9,14 @@ def local_git(path):
     str = ".git"
     if (str in os.listdir()):
         git_branch_checker()    #Checks for presence of branches
+        README_Checker()
         git_add_commit_process()
         print("Committed successfully!")
         print("\n\n")
     else:
         os.system("git init")
         git_branch_checker()    #Check for presence of branches
+        README_Checker()
         git_add_commit_process()
         print("Committed successfully!")
         print("\n\n")
@@ -63,6 +65,7 @@ def remote_git(path):
         check_var = int(input("Press 1 if no errors were observed. Else, press 2:  "))
         print("\n\n")
         if (check_var == 1):
+            README_Checker()
             branch_n = git_branch_checker()    #Check for presence of branches
             git_add_commit_process()
             push_branch_n = "git push -u origin " + branch_n
@@ -75,6 +78,7 @@ def remote_git(path):
             print("\n\n")
             link = input("Enter link:  ")
             os.system("git -remote add origin ", link)
+            README_Checker()
             branch_n = git_branch_checker()
             git_add_commit_process()
             push_branch_n = "git push -u origin " + branch_n
