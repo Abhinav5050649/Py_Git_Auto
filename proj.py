@@ -6,8 +6,8 @@ Programmer: Abhinav Sharma
 
 #Method for local git related stuff
 def local_git(path):
-    str = ".git"
-    if (str in os.listdir()):
+    str_name = ".git"
+    if (str_name in os.listdir()):
         git_branch_checker()    #Checks for presence of branches
         README_Checker()
         git_add_commit_process()
@@ -56,8 +56,8 @@ def option():
 
 #method for remote git repo related stuff
 def remote_git(path):
-    str = ".git"
-    if (str in os.listdir()):
+    str_name = ".git"
+    if (str_name in os.listdir()):
         os.system("git remote -v")
         print("\n\n")
         print("If you don't see any message, then it means that you haven't connected your local git repo to the remote repo on github.")
