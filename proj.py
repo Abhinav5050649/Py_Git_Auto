@@ -82,7 +82,7 @@ def remote_git(path):
             README_Checker()
             branch_n = git_branch_checker()
             git_add_commit_process()
-            push_branch_n = "git push --set-upstream origin " + branch_n
+            push_branch_n = "git push -u origin main"
             os.system(push_branch_n)    #add feature for branch specific work
             print("Pushed successfully!")
             print("\n\n")
