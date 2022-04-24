@@ -68,7 +68,7 @@ def remote_git(path):
             README_Checker()
             branch_n = git_branch_checker()    #Check for presence of branches
             git_add_commit_process()
-            push_branch_n = "git push --set-upstream origin " + branch_n
+            push_branch_n = "git push -u origin " + branch_n
             os.system(push_branch_n)     #add feature for branch specific work
             print("Pushed successfully!")
             print("\n\n")
@@ -77,7 +77,7 @@ def remote_git(path):
             print("Ok. You will have to follow the documentation given on github.com for this purpose. Then, paste the ssh link on the terminal when prompted.")
             print("\n\n")
             link = input("Enter link:  ")
-            ssh_link_for_remote_repo = "git -remote add origin " + link
+            ssh_link_for_remote_repo = "git remote add origin " + link
             os.system(ssh_link_for_remote_repo)
             README_Checker()
             branch_n = git_branch_checker()
