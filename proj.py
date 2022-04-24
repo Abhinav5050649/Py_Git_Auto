@@ -29,12 +29,12 @@ def git_branch_checker():
     branch_op_checker = int(input("Enter 1 to SWITCH to another branch. Else, press 0:  "))
 
     if (branch_op_checker == 0):
-        return
+        return ""
     else:
         branch_name = input("Enter name of branch: ")
         branch_change_statement = "git checkout " + branch_name
         os.system(branch_change_statement)
-        return
+        return branch_name
 
 
 #Checks for presence of a README.md file in the given directory and makes user create one if one not found
